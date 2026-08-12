@@ -1,0 +1,18 @@
+/* =====================================================================
+   Otway Tree Care — CTA card
+   Replaces the old (non-functional) quote forms on non-contact pages.
+   The real form lives only on contact.html.
+   ===================================================================== */
+.otc-cta-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid #e4e9e4;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,32,.08);padding:38px 34px;text-align:center;font-family:'Montserrat','Inter',system-ui,-apple-system,Segoe UI,sans-serif;box-sizing:border-box;}
+.otc-cta-card *{box-sizing:border-box;}
+.otc-cta-card__title{margin:0 0 10px;color:#1e3a24;font-size:24px;font-weight:800;line-height:1.25;}
+.otc-cta-card__text{margin:0 0 26px;color:#4a5a4e;font-size:16px;line-height:1.6;}
+.otc-cta-card__actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.otc-cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none;line-height:1;white-space:nowrap;transition:background .15s,transform .05s,color .15s;}
+.otc-cta-btn--primary{background:#039855;color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.08);}
+.otc-cta-btn--primary:hover{background:#027a48;}
+.otc-cta-btn--primary:active{transform:translateY(1px);}
+.otc-cta-btn--ghost{background:#f2f7f1;color:#1e5c2e;border:1.5px solid #cfe0d2;}
+.otc-cta-btn--ghost:hover{background:#e6efe6;color:#16833f;}
+.otc-cta-btn svg{width:18px;height:18px;fill:currentColor;flex:0 0 auto;}
+@media (max-width:480px){.otc-cta-card{padding:30px 20px;}.otc-cta-btn{width:100%;}}
