@@ -27,7 +27,13 @@
 }
 
 /* inner wrapper (image + text row) fills the card via flex, not % height
-   (percentage heights through several nested layers are unreliable) */
+   (percentage heights through several nested layers are unreliable).
+   GHL's own ".vertical" class sets justify-content:center — override to
+   flex-start everywhere it appears inside a card (it recurs at more
+   than one nesting level) so text sits at the top, not centred. */
+.otc-service-card .vertical.inner{
+  justify-content:flex-start !important;
+}
 .otc-service-card > .vertical.inner{
   display:flex;
   flex-direction:column;
@@ -54,27 +60,36 @@
   flex:1 1 auto;
   display:flex;
   flex-direction:column;
+  justify-content:flex-start !important;
   min-height:0;
 }
 .otc-service-card > .vertical.inner > .c-row.c-wrapper > .inner{
   flex:1 1 auto;
   display:flex;
   flex-direction:column;
+  justify-content:flex-start !important;
   min-height:0;
 }
 .otc-service-card > .vertical.inner > .c-row.c-wrapper > .inner > .c-column{
   flex:1 1 auto;
   display:flex;
   flex-direction:column;
+  justify-content:flex-start !important;
   min-height:0;
 }
 
 /* text area padding */
 .otc-service-card .c-row > .inner{ padding:22px 24px 26px !important; }
 
-/* the grid row that holds the 3 cards per line: stretch children to equal height */
+/* the grid row that holds the 3 cards per line: stretch to equal height
+   and add a real gap so cards don't touch */
 .c-row > .inner:has(> .otc-service-card){
   align-items:stretch !important;
+  gap:24px;
+}
+/* extra breathing room between stacked rows of cards */
+.c-row.c-wrapper:has(> .inner > .otc-service-card){
+  margin-bottom:24px;
 }
 
 /* title becomes a link with an arrow that slides in on hover */
