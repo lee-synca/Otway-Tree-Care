@@ -1,0 +1,67 @@
+/* =====================================================================
+   Otway Tree Care — site header
+   Loaded on every page via <link href="./assets/otc-header.css">
+   ===================================================================== */
+.otc-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,40,25,.09);box-shadow:0 1px 3px rgba(16,24,32,.05);font-family:'Montserrat','Inter',system-ui,-apple-system,Segoe UI,sans-serif;}
+.otc-header *{box-sizing:border-box;}
+.otc-header a{text-decoration:none;}
+.otc-header__inner{max-width:1240px;margin:0 auto;padding:0 24px;height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+
+/* logo */
+.otc-logo{display:flex;align-items:center;flex:0 0 auto;}
+.otc-logo img{height:62px;width:auto;display:block;}
+
+/* primary nav */
+.otc-nav__list{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;}
+.otc-nav__item{position:relative;}
+.otc-nav__link{display:inline-flex;align-items:center;gap:6px;padding:10px 14px;color:#23303a;font-size:15px;font-weight:600;border-radius:8px;line-height:1;white-space:nowrap;transition:color .15s,background .15s;cursor:pointer;}
+.otc-nav__link:hover,.otc-nav__link:focus-visible{color:#2b7a37;background:#f2f7f1;}
+.otc-nav__caret{width:12px;height:12px;transition:transform .2s ease;}
+.otc-nav__item.has-sub:hover .otc-nav__caret{transform:rotate(180deg);}
+
+/* desktop dropdown */
+.otc-submenu{position:absolute;top:calc(100% + 8px);left:0;min-width:264px;background:#fff;border:1px solid rgba(20,40,25,.1);border-radius:14px;box-shadow:0 14px 34px rgba(16,24,32,.15);padding:8px;list-style:none;margin:0;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .16s ease,transform .16s ease,visibility .16s;}
+.otc-submenu::before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px;}
+.otc-nav__item.has-sub:hover .otc-submenu,.otc-nav__item.has-sub:focus-within .otc-submenu{opacity:1;visibility:visible;transform:translateY(0);}
+.otc-submenu a{display:block;padding:10px 12px;color:#3a4a52;font-size:14.5px;font-weight:500;border-radius:9px;transition:color .15s,background .15s;}
+.otc-submenu a:hover{color:#2b7a37;background:#f2f7f1;}
+
+/* actions (phone + CTA) */
+.otc-actions{display:flex;align-items:center;gap:16px;flex:0 0 auto;}
+.otc-phone{display:inline-flex;align-items:center;gap:8px;color:#23303a;font-weight:700;font-size:15px;white-space:nowrap;transition:color .15s;}
+.otc-phone:hover{color:#2b7a37;}
+.otc-phone svg{width:18px;height:18px;flex:0 0 auto;}
+.otc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#039855;color:#fff;font-weight:700;font-size:15px;padding:12px 20px;border-radius:10px;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.08);transition:background .15s,transform .05s;}
+.otc-btn:hover{background:#027a48;}
+.otc-btn:active{transform:translateY(1px);}
+
+/* hamburger */
+.otc-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;border:0;background:transparent;cursor:pointer;padding:11px;border-radius:8px;}
+.otc-burger span{display:block;height:2.5px;width:100%;background:#23303a;border-radius:2px;transition:transform .25s ease,opacity .2s ease;}
+.otc-burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+.otc-burger.open span:nth-child(2){opacity:0;}
+.otc-burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+
+/* mobile panel */
+.otc-mobile{display:none;}
+
+@media (max-width:1000px){
+  .otc-nav,.otc-actions{display:none;}
+  .otc-burger{display:flex;}
+  .otc-header__inner{height:72px;}
+  .otc-logo img{height:48px;}
+  .otc-mobile{display:block;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid rgba(20,40,25,.1);box-shadow:0 18px 30px rgba(16,24,32,.13);max-height:0;overflow:hidden;transition:max-height .32s ease;}
+  .otc-mobile.open{max-height:calc(100vh - 72px);overflow-y:auto;}
+  .otc-mobile__inner{padding:8px 22px 26px;}
+  .otc-mobile a,.otc-mobile__subtoggle{display:flex;align-items:center;width:100%;text-align:left;padding:15px 6px;color:#23303a;font-size:16px;font-weight:600;border:0;background:transparent;border-bottom:1px solid #eef1ee;cursor:pointer;font-family:inherit;}
+  .otc-mobile__subtoggle{justify-content:space-between;}
+  .otc-mobile__subtoggle svg{width:14px;height:14px;transition:transform .2s ease;}
+  .otc-mobile__subtoggle.open svg{transform:rotate(180deg);}
+  .otc-mobile__sub{max-height:0;overflow:hidden;transition:max-height .3s ease;padding-left:14px;}
+  .otc-mobile__sub.open{max-height:640px;}
+  .otc-mobile__sub a{font-weight:500;font-size:15px;color:#4a5f68;padding:13px 6px;}
+  .otc-mobile__cta{margin-top:18px;display:flex;flex-direction:column;gap:11px;}
+  .otc-mobile__cta a{border-bottom:0;}
+  .otc-mobile__cta .otc-btn{padding:15px;font-size:16px;}
+  .otc-mobile__cta .otc-phone{display:flex;justify-content:center;padding:14px;border:1.5px solid #d7e0d9;border-radius:10px;font-size:16px;}
+}
