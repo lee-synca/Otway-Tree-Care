@@ -1,0 +1,62 @@
+/* =====================================================================
+   Otway Tree Care — modern service cards (homepage)
+   Applied by otc-cards.js, which tags each service column .otc-service-card
+   ===================================================================== */
+.otc-service-card{
+  position:relative;
+  background:#fff;
+  border:1px solid #e7ece7;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 1px 3px rgba(16,24,32,.05);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  height:100%;
+  cursor:pointer;
+}
+.otc-service-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 34px rgba(16,24,32,.13);
+  border-color:#cfe0d2;
+}
+
+/* image — full-bleed top, fixed height, subtle zoom on hover */
+.otc-service-card .c-image,
+.otc-service-card .image-container{ margin:0 !important; border-radius:0 !important; overflow:hidden; }
+.otc-service-card img{
+  display:block !important;
+  width:100% !important;
+  height:190px !important;
+  object-fit:cover !important;
+  border-radius:0 !important;
+  transition:transform .35s ease;
+}
+.otc-service-card:hover img{ transform:scale(1.05); }
+
+/* text area padding */
+.otc-service-card .c-row > .inner{ padding:22px 24px 26px !important; }
+
+/* title becomes a link with an arrow that slides in on hover */
+.otc-service-card h3{ margin:0 0 8px !important; }
+.otc-card-title-link{
+  color:#1e3a24 !important;
+  text-decoration:none !important;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:color .15s ease;
+}
+.otc-service-card:hover .otc-card-title-link{ color:#039855 !important; }
+.otc-card-title-link::after{
+  content:"\2192";
+  font-weight:700;
+  opacity:0;
+  transform:translateX(-5px);
+  transition:opacity .2s ease, transform .2s ease;
+}
+.otc-service-card:hover .otc-card-title-link::after{ opacity:1; transform:translateX(0); }
+
+/* the tagline (green caps label) */
+.otc-service-card h4{ margin:0 0 10px !important; letter-spacing:.4px; }
+
+/* hidden Learn More button */
+.otc-hidden{ display:none !important; }
