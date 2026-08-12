@@ -1,0 +1,41 @@
+/* =====================================================================
+   Otway Tree Care — global theme overrides
+   - Headings use Montserrat (to match the new header/footer/CTA type)
+   - Legacy GHL buttons restyled to match the new buttons
+   Loaded on every page.
+   ===================================================================== */
+
+/* ---- Headings: switch from "Bakbak One" to Montserrat ---- */
+.hl_page-preview--content h1,
+.hl_page-preview--content h2,
+.hl_page-preview--content h3{
+  font-family:'Montserrat','Inter',system-ui,-apple-system,'Segoe UI',sans-serif !important;
+  font-weight:800 !important;
+}
+.hl_page-preview--content h4,
+.hl_page-preview--content h5,
+.hl_page-preview--content h6{
+  font-family:'Montserrat','Inter',system-ui,-apple-system,'Segoe UI',sans-serif !important;
+  font-weight:700 !important;
+}
+
+/* ---- Legacy buttons: match the new button style ---- */
+.hl_page-preview--content .c-button a,
+.hl_page-preview--content .c-button button{
+  background:#039855 !important;
+  color:#fff !important;
+  border:0 !important;
+  border-radius:11px !important;
+  font-family:'Montserrat','Inter',system-ui,-apple-system,'Segoe UI',sans-serif !important;
+  font-weight:700 !important;
+  box-shadow:0 1px 2px rgba(0,0,0,.08) !important;
+  transition:background .15s ease,transform .05s ease !important;
+}
+.hl_page-preview--content .c-button a:hover,
+.hl_page-preview--content .c-button button:hover{
+  background:#027a48 !important;
+}
+.hl_page-preview--content .c-button a:active,
+.hl_page-preview--content .c-button button:active{
+  transform:translateY(1px) !important;
+}
