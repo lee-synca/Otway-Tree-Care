@@ -5,7 +5,7 @@
 .otc-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,40,25,.09);box-shadow:0 1px 3px rgba(16,24,32,.05);font-family:'Montserrat','Inter',system-ui,-apple-system,Segoe UI,sans-serif;}
 .otc-header *{box-sizing:border-box;}
 .otc-header a{text-decoration:none;}
-.otc-header__inner{max-width:1440px;margin:0 auto;padding:0 32px;height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.otc-header__inner{max-width:1280px;margin:0 auto;padding:0 20px;height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
 
 /* logo */
 .otc-logo{display:flex;align-items:center;flex:0 0 auto;}
