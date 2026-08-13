@@ -37,7 +37,7 @@
 .otc-why{background:#fff;}
 .otc-why__head{max-width:640px;margin:0 auto 46px;text-align:center;}
 .otc-why__head .otc-lede{margin:0 auto;}
-.otc-why__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.otc-why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .otc-why__card{background:#f8faf8;border:1px solid #e7ece7;border-radius:16px;padding:30px 24px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
 .otc-why__card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(16,24,32,.08);border-color:#cfe0d2;}
 .otc-why__icon{width:48px;height:48px;border-radius:12px;background:#e6f4ea;display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
