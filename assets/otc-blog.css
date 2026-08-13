@@ -328,6 +328,16 @@
 .author-social-icon{width:20px;height:20px;margin-top:10px;opacity:.7;transition:opacity .15s;}
 .author-social-icon:hover{opacity:1;}
 
+/* article page wrapper (clean hand-built posts, e.g. post/*.html) */
+.otc-article{max-width:1000px;margin:0 auto;padding:56px 20px 8px;}
+@media(max-width:640px){.otc-article{padding:36px 16px 4px;}}
+.otc-article .blog-content-title{font-family:'Montserrat','Inter',system-ui,sans-serif;font-size:clamp(28px,4.6vw,40px);font-weight:800;color:#16321f;}
+.blog-byline{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:0 0 26px;}
+.otc-figure{margin:8px 0 26px;}
+.otc-figure img{display:block;width:100%;border-radius:12px;margin:0;}
+.otc-figure figcaption{margin-top:9px;font-size:14px;color:#8a9990;font-style:italic;text-align:center;}
+.otc-article .otc-cta-banner{margin-top:16px;}
+
 /* back to blog / back to top */
 .blog-back-button{
   display:inline-flex;
