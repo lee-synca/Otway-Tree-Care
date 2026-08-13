@@ -10,6 +10,11 @@
    buttons, icons and pills, not heading text); eyebrows are 16px/700
    with 2px letter-spacing in the site's green, no uppercase transform. */
 .otc-careers h2{font-size:42px;font-weight:700;color:#444;margin:0 0 14px;line-height:1.2;}
+/* the closing CTA banner's own title (.otc-cta-banner__title, defined
+   in otc-cta.css) is also an h2 and lives inside .otc-careers, so the
+   generic h2 rule above was overriding its intended white text —
+   restore it explicitly. */
+.otc-careers .otc-cta-banner__title{color:#fff;font-size:30px;margin:0 0 8px;}
 .otc-careers .otc-eyebrow{display:inline-block;font-size:16px;font-weight:700;letter-spacing:2px;color:#107b11;margin:0 0 10px;}
 .otc-careers .otc-lede{font-size:16px;line-height:1.6;color:#444;max-width:62ch;margin:0 0 0;}
 
