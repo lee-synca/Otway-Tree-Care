@@ -1,28 +1,36 @@
 /* =====================================================================
    Otway Tree Care — Careers page
    ===================================================================== */
-.otc-careers{font-family:'Montserrat','Inter',system-ui,-apple-system,Segoe UI,sans-serif;color:#2c3a30;}
+.otc-careers{font-family:'Montserrat','Inter',system-ui,-apple-system,Segoe UI,sans-serif;color:#444;}
 .otc-careers *{box-sizing:border-box;}
 .otc-careers section{padding:76px 20px;}
 .otc-careers__wrap{max-width:1280px;margin:0 auto;}
-.otc-careers h2{font-size:34px;font-weight:700;color:#16321f;margin:0 0 14px;line-height:1.2;}
-.otc-careers .otc-eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#2b7a37;margin:0 0 10px;}
-.otc-careers .otc-lede{font-size:17px;line-height:1.7;color:#4d5c52;max-width:62ch;margin:0 0 0;}
+/* section heading + eyebrow + lede match the rest of the site exactly:
+   headings are neutral dark gray (green is reserved for eyebrows,
+   buttons, icons and pills, not heading text); eyebrows are 16px/700
+   with 2px letter-spacing in the site's green, no uppercase transform. */
+.otc-careers h2{font-size:42px;font-weight:700;color:#444;margin:0 0 14px;line-height:1.2;}
+.otc-careers .otc-eyebrow{display:inline-block;font-size:16px;font-weight:700;letter-spacing:2px;color:#107b11;margin:0 0 10px;}
+.otc-careers .otc-lede{font-size:16px;line-height:1.6;color:#444;max-width:62ch;margin:0 0 0;}
 
 /* ---------- hero ---------- */
 .otc-careers-hero{position:relative;min-height:560px;display:flex;align-items:center;color:#fff;overflow:hidden;}
 .otc-careers-hero__bg{position:absolute;inset:0;background-image:url('./6fbf2276_69b07279414923060f71913a.jpg');background-size:cover;background-position:center 40%;}
 .otc-careers-hero__overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(10,22,14,.88) 10%,rgba(10,22,14,.55) 55%,rgba(10,22,14,.35) 100%);}
 .otc-careers-hero__inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:110px 20px 70px;width:100%;}
-.otc-careers-hero .otc-eyebrow{color:#8fe0a2;}
-.otc-careers-hero h1{font-size:52px;font-weight:700;line-height:1.12;margin:0 0 20px;max-width:16ch;}
-.otc-careers-hero p{font-size:18px;line-height:1.7;color:rgba(255,255,255,.92);max-width:56ch;margin:0 0 32px;}
+/* hero eyebrow matches the site's hero convention: plain white, no
+   letter-spacing (only non-hero section eyebrows are green + spaced) */
+.otc-careers-hero .otc-eyebrow{color:#fff;letter-spacing:normal;}
+.otc-careers-hero h1{font-size:64px;font-weight:700;line-height:1.12;margin:0 0 20px;max-width:16ch;}
+.otc-careers-hero p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);max-width:56ch;margin:0 0 32px;}
 .otc-careers-hero__actions{display:flex;gap:14px;flex-wrap:wrap;}
-.otc-careers-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:16px;padding:15px 26px;border-radius:11px;text-decoration:none;transition:background .15s,transform .05s,color .15s,border-color .15s;}
+/* button shape matches the site's hero/CTA buttons exactly: 11px
+   radius, 15px/30px padding, 16px/700 label */
+.otc-careers-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:16px;padding:15px 30px;border-radius:11px;text-decoration:none;transition:background .15s,transform .05s,color .15s,border-color .15s;}
 .otc-careers-btn--primary{background:#039855;color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.08);}
 .otc-careers-btn--primary:hover{background:#027a48;}
 .otc-careers-btn--primary:active{transform:translateY(1px);}
-.otc-careers-btn--ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff;}
+.otc-careers-btn--ghost{border:1.6px solid rgba(255,255,255,.65);color:#fff;}
 .otc-careers-btn--ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;}
 
 /* ---------- why work with us ---------- */
@@ -34,7 +42,7 @@
 .otc-why__card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(16,24,32,.08);border-color:#cfe0d2;}
 .otc-why__icon{width:48px;height:48px;border-radius:12px;background:#e6f4ea;display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
 .otc-why__icon svg{width:24px;height:24px;fill:#1e6b34;}
-.otc-why__card h3{font-size:18px;font-weight:700;color:#16321f;margin:0 0 10px;}
+.otc-why__card h3{font-size:18px;font-weight:700;color:#444;margin:0 0 10px;}
 .otc-why__card p{font-size:15px;line-height:1.65;color:#57685c;margin:0;}
 
 /* ---------- culture / quote ---------- */
@@ -42,11 +50,11 @@
 .otc-culture__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;}
 .otc-culture__photo{border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(16,24,32,.12);}
 .otc-culture__photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:7/8;}
-.otc-culture blockquote{margin:0 0 22px;font-size:24px;line-height:1.5;color:#16321f;font-weight:600;}
+.otc-culture blockquote{margin:0 0 22px;font-size:24px;line-height:1.5;color:#444;font-weight:600;}
 .otc-culture blockquote::before{content:"\201C";}
 .otc-culture blockquote::after{content:"\201D";}
 .otc-culture__byline{font-size:15px;color:#57685c;}
-.otc-culture__byline strong{color:#16321f;}
+.otc-culture__byline strong{color:#444;}
 
 /* ---------- openings ---------- */
 .otc-openings{background:#fff;}
@@ -57,7 +65,7 @@
 .otc-role:hover{border-color:#cfe0d2;box-shadow:0 10px 26px rgba(16,24,32,.07);}
 .otc-role__info{flex:1 1 320px;}
 .otc-role__tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#1e6b34;background:#e6f4ea;padding:4px 10px;border-radius:999px;margin-bottom:10px;}
-.otc-role h3{font-size:19px;font-weight:700;color:#16321f;margin:0 0 8px;}
+.otc-role h3{font-size:19px;font-weight:700;color:#444;margin:0 0 8px;}
 .otc-role p{font-size:14.5px;line-height:1.6;color:#57685c;margin:0;max-width:56ch;}
 .otc-role__apply{flex:0 0 auto;}
 
@@ -71,7 +79,8 @@
   .otc-why__grid{grid-template-columns:repeat(2,1fr);}
   .otc-culture__grid{grid-template-columns:1fr;gap:34px;}
   .otc-culture__photo{max-width:360px;margin:0 auto;}
-  .otc-careers-hero h1{font-size:38px;}
+  .otc-careers-hero h1{font-size:44px;}
+  .otc-careers h2{font-size:34px;}
 }
 @media (max-width:620px){
   .otc-why__grid{grid-template-columns:1fr;}
@@ -79,4 +88,5 @@
   .otc-role__apply{width:100%;}
   .otc-role__apply .otc-careers-btn{width:100%;}
   .otc-careers-hero__inner{padding-top:100px;}
+  .otc-careers-hero h1{font-size:32px;}
 }
